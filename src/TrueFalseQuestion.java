@@ -28,7 +28,7 @@ public class TrueFalseQuestion extends Question {
 
     private String validAnswer(String answer){
         var validAnswersTrue = new String[]{"t", "true", "T", "True", "TRUE", "y", "yes", "Y", "Yes", "YES"};
-        var validAnswersFalse = new String[]{"f", "false", "False", "FALSE", "n", "no", "No", "NO"};
+        var validAnswersFalse = new String[]{"f", "false", "F", "False", "FALSE", "n", "no", "N", "No", "NO"};
 
         if (Arrays.asList(validAnswersTrue).contains(answer)) {
             return "TRUE";
