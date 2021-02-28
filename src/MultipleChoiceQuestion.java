@@ -22,7 +22,7 @@ public class MultipleChoiceQuestion extends Question {
             if (answer.equals("A") || answer.equals("B") || answer.equals("C") || answer.equals("D") || answer.equals("E")) {
                 return answer;
             } else {
-                JOptionPane.showMessageDialog(null, "Invalid answer.");
+                JOptionPane.showMessageDialog(null, "Invalid answer. Please enter A, B, C, D or E.");
             }
         }
     }

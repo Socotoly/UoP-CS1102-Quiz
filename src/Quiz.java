@@ -3,6 +3,7 @@ public class Quiz {
 
     public static void main(String[] args) {
 
+        // array to add all questions
         var AllQuestions = new Question[10];
 
         // first question
@@ -16,31 +17,32 @@ public class Quiz {
         AllQuestions[2] = new MultipleChoiceQuestion("What is the smallest country in the world?",
                 "Vatican City", "Kuwait", "Chile", "New Zealand", "Somalia", "a");
 
-        // second question
+        // forth question
         AllQuestions[3] = new TrueFalseQuestion("Chewing gum can boost your concentration.", "true");
 
-        // third question
+        // fifth question
         AllQuestions[4] = new MultipleChoiceQuestion("How many time zones are there in Russia?",
                 "1", "9", "7", "4", "11", "e");
 
-        // second question
+        // sixth question
         AllQuestions[5] = new TrueFalseQuestion("Milk is 87% water.", "true");
 
-        // forth question
+        // seventh question
         AllQuestions[6] = new MultipleChoiceQuestion("For which of the following disciplines is Nobel Prize awarded?",
                 "Physics and Chemistry", "Physiology or Medicine", "Literature", "Economics", "All of the above", "e");
 
-        // second question
+        // eighth question
         AllQuestions[7] = new TrueFalseQuestion("Marrakesh is the capital of Morocco.", "false");
 
-        // fifth question
+        // ninth question
         AllQuestions[8] = new MultipleChoiceQuestion("The ozone layer restricts:",
                 "Visible light", "Ultraviolet radiation", "X-rays", "Gamma rays", "Infrared radiation", "b");
 
-        // second question
+        // tenth question
         AllQuestions[9] = new TrueFalseQuestion("An octopus has three hearts.", "true");
 
-        for (var question: AllQuestions) {
+        // loop over the questions and call "check" to show it to the user.
+        for (var question : AllQuestions) {
             question.check();
         }
 
