@@ -2,7 +2,6 @@
 public class Quiz {
 
     public static void main(String[] args) {
-
         // array to add all questions
         var AllQuestions = new Question[10];
 

@@ -1,29 +1,20 @@
-import javax.swing.*;
 import java.util.Arrays;
+import javax.swing.*;
 
 public class TrueFalseQuestion extends Question {
 
     TrueFalseQuestion(String question, String answer) {
-        this.question = "TRUE or FALSE: " + question;
+        super(question);
+
+        JPanel buttons = new JPanel();
+        addButton(buttons,"TRUE");
+        addButton(buttons,"FALSE");
+
+        this.question.add(buttons);
+
+        this.initQuestionDialog();
 
         this.correctAnswer = validAnswer(answer);
-    }
-
-    @Override
-    String ask() {
-        while (true) {
-            String answer = JOptionPane.showInputDialog(question);
-            answer = answer.toUpperCase();
-
-            var valid = validAnswer(answer);
-
-            // Check if the answer is null then the answer is invalid, check the "validAnswer" method implementation.
-            if (valid == null) {
-                JOptionPane.showMessageDialog(null, "Invalid answer. Please enter TRUE or FALSE.");
-            } else {
-                return valid;
-            }
-        }
     }
 
 
@@ -43,5 +34,12 @@ public class TrueFalseQuestion extends Question {
 
         // returns null when the answer is invalid.
         return null;
+    }
+
+    private void addButton(JPanel buttons, String label) {
+        JButton button = new JButton(label);
+        button.addActionListener(question);
+
+        buttons.add(button);
     }
 }
